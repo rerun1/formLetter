@@ -1,0 +1,12 @@
+body {
+  background-image: url('../img/backgroundPaper.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  border: 1px solid blue;
+}
+.container {
+  border: 1px solid red;
+}
+form {
+  border: 1px solid green;
+}
