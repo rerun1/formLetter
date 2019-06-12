@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,20 +10,111 @@
     <title>Form Letter</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          send a letter to a love
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <form id="formLetter">
+    <div class="container-fluid">
+      <!-- begin opening message and form-->
+      <div class="row align-items-center justify-content-center mx-auto">
+        <div id="greeting" class="col-12 letterPositioning">
+          <p class="greeting carolynaBlack">Create a secret Love Letter...</p>
+          <!-- begin form -->
+          <form id="formLetter" class="akzidenzLightCon">
             <div class="form-group">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <label for="name">Your Lover's Name & Address</label>
+              <input id="name" class="form-control" type="text" placeholder="Enter your special someone's name">
             </div>
+            <div class="form-row">
+              <div class="form-group col-8">
+                <label for="address1" class="sr-only">address</label>
+                <input id="address1" class="form-control" type="text" placeholder="street address">
+              </div>
+              <div class="form-group col-4">
+                <label for="address2" class="sr-only">apt., suite or floor:</label>
+                <input id="address2" class="form-control" type="text" placeholder="apt, suite, or floor">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="city" class="sr-only">city</label>
+                <input id="city" class="form-control" type="text" placeholder="city">
+              </div>
+              <div class="form-group col">
+                <label for="state" class="sr-only">state</label>
+                <select id="state" class="form-control">
+                  <option value="" selected="selected">state...</option>
+                  <option value="AL">Alabama</option>
+                	<option value="AK">Alaska</option>
+                	<option value="AZ">Arizona</option>
+                	<option value="AR">Arkansas</option>
+                	<option value="CA">California</option>
+                	<option value="CO">Colorado</option>
+                	<option value="CT">Connecticut</option>
+                	<option value="DE">Delaware</option>
+                	<option value="DC">Dist of Columbia</option>
+                	<option value="FL">Florida</option>
+                	<option value="GA">Georgia</option>
+                	<option value="HI">Hawaii</option>
+                	<option value="ID">Idaho</option>
+                	<option value="IL">Illinois</option>
+                	<option value="IN">Indiana</option>
+                	<option value="IA">Iowa</option>
+                	<option value="KS">Kansas</option>
+                	<option value="KY">Kentucky</option>
+                	<option value="LA">Louisiana</option>
+                	<option value="ME">Maine</option>
+                	<option value="MD">Maryland</option>
+                	<option value="MA">Massachusetts</option>
+                	<option value="MI">Michigan</option>
+                	<option value="MN">Minnesota</option>
+                	<option value="MS">Mississippi</option>
+                	<option value="MO">Missouri</option>
+                	<option value="MT">Montana</option>
+                	<option value="NE">Nebraska</option>
+                	<option value="NV">Nevada</option>
+                	<option value="NH">New Hampshire</option>
+                	<option value="NJ">New Jersey</option>
+                	<option value="NM">New Mexico</option>
+                	<option value="NY">New York</option>
+                	<option value="NC">North Carolina</option>
+                	<option value="ND">North Dakota</option>
+                	<option value="OH">Ohio</option>
+                	<option value="OK">Oklahoma</option>
+                	<option value="OR">Oregon</option>
+                	<option value="PA">Pennsylvania</option>
+                	<option value="RI">Rhode Island</option>
+                	<option value="SC">South Carolina</option>
+                	<option value="SD">South Dakota</option>
+                	<option value="TN">Tennessee</option>
+                	<option value="TX">Texas</option>
+                	<option value="UT">Utah</option>
+                	<option value="VT">Vermont</option>
+                	<option value="VA">Virginia</option>
+                	<option value="WA">Washington</option>
+                	<option value="WV">West Virginia</option>
+                	<option value="WI">Wisconsin</option>
+                	<option value="WY">Wyoming</option>
+                </select>
+              </div>
+              <div class="form-group col">
+                <label for="zip" class="sr-only">zip</label>
+                <input id="zip" class="form-control" type="text" placeholder="zip">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Special Message:</label>
+              <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger akzidenzLightConItalic">preview your love letter</button>
           </form>
+          <!-- end form -->
+        </div>
+        <!-- end opening message and form -->
+      </div>
+      <div class="row align-items-center justify-content-center mx-auto">
+        <div id="loveLetter" class="col-10 bernhardModern letterPositioning">
+          <p> <span class="name"></span> <br>
+          <span class="address1"></span><span class="address2"></span><br>
+          <span class="city"></span>, <span class="state"></span>&nbsp; <span class="zip"></span></p>
+          <p class="message"></p>
+          <p>Your Secret Admirer</p>
         </div>
       </div>
     </div>
